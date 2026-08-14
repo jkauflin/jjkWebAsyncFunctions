@@ -7,6 +7,8 @@ DESCRIPTION:  Class to run scheduled jobs via Azure Function TimerTrigger for
 Modification History
 2025-04-30 JJK  Initial version
 2025-05-03 JJK  Fixed error in dynamic object value get
+2026-08-14 JJK  Moving this to jjkWebAsyncFunctions project to run as a 
+                separate Azure Function App
 ================================================================================*/
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;

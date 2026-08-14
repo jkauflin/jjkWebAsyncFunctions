@@ -11,7 +11,7 @@ on:
 
 env:
   AZURE_FUNCTIONAPP_PACKAGE_PATH: '.' # set this to the path to your web app project, defaults to the repository root
-  DOTNET_VERSION: '10.0' # set this to the dotnet version to use
+  DOTNET_VERSION: '10.0.x' # set this to the dotnet version to use
 
 jobs:
   build-and-deploy:
@@ -22,10 +22,10 @@ jobs:
 
     steps:
       - name: 'Checkout GitHub Action'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup DotNet ${{ env.DOTNET_VERSION }} Environment
-        uses: actions/setup-dotnet@v1
+        uses: actions/setup-dotnet@v5
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
@@ -37,7 +37,7 @@ jobs:
           popd
       
       - name: Login to Azure
-        uses: azure/login@v2
+        uses: azure/login@v3
         with:
           client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_2FB6E5396FC84B7F9CA3D5C8BBF00E3A }}
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_C6FE9B0F3FCE4888ABE85EBB37AC60D8 }}

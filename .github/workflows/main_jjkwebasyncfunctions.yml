@@ -35,7 +35,7 @@ jobs:
           pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
           dotnet build --configuration Release --output ./output
           popd
-      
+      #azure/login@v3
       - name: Login to Azure
         uses: azure/login@v3
         with:

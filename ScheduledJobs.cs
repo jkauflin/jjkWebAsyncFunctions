@@ -3,6 +3,7 @@
 --------------------------------------------------------------------------------
 DESCRIPTION:  Class to run scheduled jobs via Azure Function TimerTrigger for
                 the web application
+                
 --------------------------------------------------------------------------------
 Modification History
 2025-04-30 JJK  Initial version
